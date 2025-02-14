@@ -1,1 +1,86 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme {
+  /* Border width */
+  --border-width: 1px;
+
+  /* Max width */
+  --max-w-screen-xs: 400px;
+
+  /* Grid layouts */
+  --grid-rows-layout-mobile: auto 1fr;
+  --grid-cols-layout-desktop: auto 1fr;
+
+  /* Colors */
+  --color-raisin-black: #1a202c;
+  --color-raisin-black-100: #050709;
+  --color-raisin-black-200: #0b0d12;
+  --color-raisin-black-300: #10141b;
+  --color-raisin-black-400: #151a24;
+  --color-raisin-black-500: #1a202c;
+  --color-raisin-black-600: #3b4964;
+  --color-raisin-black-700: #5b719c;
+  --color-raisin-black-800: #90a0be;
+  --color-raisin-black-900: #c8cfdf;
+
+  --color-white-smoke: #f5f5f5;
+  --color-white-smoke-100: #313131;
+  --color-white-smoke-200: #626262;
+  --color-white-smoke-300: #939393;
+  --color-white-smoke-400: #c4c4c4;
+  --color-white-smoke-500: #f5f5f5;
+  --color-white-smoke-600: #f7f7f7;
+  --color-white-smoke-700: #f9f9f9;
+  --color-white-smoke-800: #fbfbfb;
+  --color-white-smoke-900: #fdfdfd;
+
+  --color-seasalt: #f8f9fa;
+  --color-seasalt-100: #29323a;
+  --color-seasalt-200: #536475;
+  --color-seasalt-300: #8496a8;
+  --color-seasalt-400: #bfc8d1;
+  --color-seasalt-500: #f8f9fa;
+  --color-seasalt-600: #fafbfc;
+  --color-seasalt-700: #fbfcfc;
+  --color-seasalt-800: #fdfdfd;
+  --color-seasalt-900: #fefefe;
+
+  --color-tekhelet: #3d348b;
+  --color-tekhelet-100: #0c0a1c;
+  --color-tekhelet-200: #181437;
+  --color-tekhelet-300: #241f53;
+  --color-tekhelet-400: #30296e;
+  --color-tekhelet-500: #3d348b;
+  --color-tekhelet-600: #5044b9;
+  --color-tekhelet-700: #7b72cb;
+  --color-tekhelet-800: #a7a1dc;
+  --color-tekhelet-900: #d3d0ee;
+
+  --color-persimmon: #f35b04;
+  --color-persimmon-100: #301201;
+  --color-persimmon-200: #602401;
+  --color-persimmon-300: #913602;
+  --color-persimmon-400: #c14903;
+  --color-persimmon-500: #f35b04;
+  --color-persimmon-600: #fc792e;
+  --color-persimmon-700: #fd9b62;
+  --color-persimmon-800: #fdbc97;
+  --color-persimmon-900: #fedecb;
+
+  --color-black-rain: #212529;
+  --color-black-rain-100: #030404;
+  --color-black-rain-200: #070708;
+  --color-black-rain-300: #0a0b0c;
+  --color-black-rain-400: #0d0f10;
+  --color-black-rain-500: #111315;
+  --color-black-rain-600: #141619;
+  --color-black-rain-700: #171a1d;
+  --color-black-rain-800: #212529;
+  --color-black-rain-900: #373b3e;
+}
+
+html {
+  height: 100dvh;
+}
