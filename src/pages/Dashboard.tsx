@@ -1,12 +1,10 @@
-import { signOut } from "firebase/auth/web-extension";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../firebase";
 import { useAuth } from "../providers/AuthContext";
 import { useEffect, useState } from "react";
 
 export const Dashboard = () => {
   const navigate = useNavigate();
-  const { user, loading } = useAuth();
+  const { user, loading, logout } = useAuth();
   const [token, setToken] = useState("");
 
   useEffect(() => {
@@ -21,14 +19,8 @@ export const Dashboard = () => {
   }, [user]);
 
   const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      navigate("/login");
-    } catch (error) {
-      if (error instanceof Error) {
-        console.error("Error al cerrar sesión:", error.message);
-      }
-    }
+    logout();
+    navigate("/")
   };
 
   const handleCopyToken = async () => {
