@@ -38,7 +38,9 @@ export const Login = () => {
       >
         {/* Muestra el error si existe */}
         {localError && (
-          <p className="text-red-500 p-2 rounded-md bg-red-200">{localError}</p>
+          <p className="flex justify-between items-center text-red-200 p-2 rounded-md bg-red-800">
+            <span>{localError}</span>
+          </p>
         )}
 
         <input
