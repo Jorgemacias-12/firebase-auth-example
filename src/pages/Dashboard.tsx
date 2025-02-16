@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../providers/AuthContext";
 import { useEffect, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 export const Dashboard = () => {
   const navigate = useNavigate();
@@ -20,11 +21,13 @@ export const Dashboard = () => {
 
   const handleLogout = async () => {
     logout();
-    navigate("/")
+    navigate("/");
   };
 
   const handleCopyToken = async () => {
     navigator.clipboard.writeText(token);
+
+    toast("Token ID en el portapapeles");
   };
 
   return (
@@ -50,7 +53,10 @@ export const Dashboard = () => {
           <span className="sr-only">Loading...</span>
         </div>
       )}
-
+      <img
+        src={user!.photoURL ?? ""}
+        className="border rounded-full w-1/6 h-auto mx-auto m-2"
+      />
       <h1 className="font-bold text-center text-4xl">
         ¡Bienvenido, {user!.displayName ?? "Usuario"}!
       </h1>
@@ -80,6 +86,10 @@ export const Dashboard = () => {
           Cerrar sesión
         </button>
       </div>
+
+      <ToastContainer 
+        theme="dark"
+      />
     </main>
   );
 };
